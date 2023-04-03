@@ -10,4 +10,3 @@ Use the arrow keys or WASD to control the snake. The objective is to eat as many
 
 # Acknowledgments
 This program was inspired by the classic Snake game and uses the SFML library for graphics.
-![image](https://user-images.githubusercontent.com/122544877/229644583-838ad2f6-2c36-4cda-b3a8-66171541b930.png)
