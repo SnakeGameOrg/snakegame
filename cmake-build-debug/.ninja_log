@@ -1,0 +1,9 @@
+# ninja log v5
+393	439	1680560325503116734	SnakeGame	b1356c65fc16af7
+13	272	1680559355735329957	CMakeFiles/SnakeGame.dir/Food.cpp.o	cfe0982004609e82
+13	271	1680559355735193933	CMakeFiles/SnakeGame.dir/Wall.cpp.o	4497bdff55ebbff7
+7	309	1680560062314838367	CMakeFiles/SnakeGame.dir/snakegame.cpp.o	f90a41c40c7c028e
+7	321	1680560062326924773	CMakeFiles/SnakeGame.dir/Snake.cpp.o	f15b21e11fd8d477
+6	393	1680560325455577521	CMakeFiles/SnakeGame.dir/Users/jose/SFML_Projects/EaglesLib/src/AnimatedWindow.cpp.o	13c6113d7ab1c9c2
+7	167	1680560427284323807	CMakeFiles/SnakeGame.dir/Users/jose/SFML_Projects/EaglesLib/src/AnimatedRectangle.cpp.o	c4a5e3c92f6cbb34
+168	201	1680560427318879455	SnakeGame	d3605da1c3db5bd5

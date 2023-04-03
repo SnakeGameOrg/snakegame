@@ -1,0 +1,30 @@
+//
+// Created by Jose Suarez on 4/3/23.
+//
+
+#include "Food.h"
+
+Food::Food() {
+    food = fgcu::AnimatedCircle(FOOD_SIZE);
+    food.setFillColor(sf::Color::Green);
+    respawn();
+}
+
+void Food::draw(fgcu::AnimatedWindow& window) {
+    window.addShape(&food);
+}
+
+void Food::respawn() {
+    // Generate a random position for the food within the window
+    int x = rand() % 26 + 2;
+    int y = rand() % 18 + 2;
+    food.setPosition(x * 30, y * 30);
+}
+
+bool Food::isEaten(Snake& snake) {
+    if (snake.body[0].shape.getGlobalBounds().intersects(food.getGlobalBounds())) {
+        respawn();
+        return true;
+    }
+    return false;
+}
