@@ -1,7 +1,8 @@
-//
-// Created by Jose Suarez on 4/3/23.
-//
-
+// File : Food.cpp
+// Class: COP 2001 Summer B 2022
+// Dev  : Jose Suarez
+// Desc : Food implementation
+// --------------------------------------------------------
 #include "Food.h"
 
 Food::Food() {

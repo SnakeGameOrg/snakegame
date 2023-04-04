@@ -1,6 +1,8 @@
-//
-// Created by Jose Suarez on 4/3/23.
-//
+// File : Snake.cpp
+// Class: COP 2001 Summer B 2022
+// Dev  : Jose Suarez
+// Desc : Snake implementation
+// --------------------------------------------------------
 
 #include <iostream>
 #include "Snake.h"

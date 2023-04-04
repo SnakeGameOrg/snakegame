@@ -1,6 +1,8 @@
-//
-// Created by Jose Suarez on 4/3/23.
-//
+// File : Food.h
+// Class: COP 2001 Summer B 2022
+// Dev  : Jose Suarez
+// Desc : Food declaration
+// --------------------------------------------------------
 
 #ifndef SNAKEGAME_FOOD_H
 #define SNAKEGAME_FOOD_H

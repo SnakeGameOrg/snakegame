@@ -1,6 +1,8 @@
-//
-// Created by Jose Suarez on 4/3/23.
-//
+// File : Snake.h
+// Class: COP 2001 Summer B 2022
+// Dev  : Jose Suarez
+// Desc : Snake declaration
+// --------------------------------------------------------
 
 #ifndef SNAKEGAME_SNAKE_H
 #define SNAKEGAME_SNAKE_H

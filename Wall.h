@@ -1,6 +1,8 @@
-//
-// Created by Jose Suarez on 4/3/23.
-//
+// File : Wall.h
+// Class: COP 2001 Summer B 2022
+// Dev  : Jose Suarez
+// Desc : Wall declaration
+// --------------------------------------------------------
 
 #ifndef SNAKEGAME_WALL_H
 #define SNAKEGAME_WALL_H
