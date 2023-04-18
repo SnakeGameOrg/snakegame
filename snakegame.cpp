@@ -2,7 +2,7 @@
 //  Author: Jose Suarez
 //  Class: COP 2001 Summer B 2022
 //  Purpose: make a snake game where food randomly spawns and
-//           the snake eats the food to grow larger.
+//           the snake eats the food to grow larger
 // ---------------------------------------------------------------------------------------------------------------------
 
 #include <iostream>
