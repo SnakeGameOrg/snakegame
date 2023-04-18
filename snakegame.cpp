@@ -12,7 +12,6 @@
 #include <SFML/Graphics.hpp>
 #include <Eagles/AnimatedWindow.h>
 #include <Eagles/AnimatedRectangle.h>
-#include <Eagles/AnimatedCircle.h>
 
 #include "Snake.h"
 #include "Food.h"
