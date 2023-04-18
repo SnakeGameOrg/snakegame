@@ -8,7 +8,7 @@
 
 Food::Food() {
     food = fgcu::AnimatedCircle(FOOD_SIZE);
-    food.setFillColor(sf::Color::Green);
+    food.setFillColor(sf::Color::Red);
     respawn();
 }
 
@@ -25,7 +25,6 @@ void Food::respawn() {
 
 bool Food::isEaten(Snake& snake) {
     if (snake.body[0].shape.getGlobalBounds().intersects(food.getGlobalBounds())) {
-        respawn();
         return true;
     }
     return false;

@@ -76,10 +76,13 @@ void Snake::update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall
     }
 
     // Check for eating food
-    if (Food ().isEaten(*this)) {
+    if (food.isEaten(*this)) {
         std::cout << "Snake ate food" << std::endl;
         length++;
-        body[length - 1].shape = body[length - 2].shape;
+        body[length - 1].shape = fgcu::AnimatedRectangle(SNAKE_SIZE, SNAKE_SIZE);
+        body[length - 1].shape.setOrigin(SNAKE_SIZE / 2, SNAKE_SIZE / 2);
+        body[length - 1].shape.setPosition(body[length - 2].shape.getPosition());
+        body[length - 1].shape.setFillColor(sf::Color::Blue);
         switch (dir) {
             case North:
                 body[length - 1].shape.move(0, SNAKE_SIZE);
