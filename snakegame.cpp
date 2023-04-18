@@ -21,8 +21,8 @@
 int main() {
     srand(time(NULL));
 
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Snake Game");
-    window.setFramerateLimit(60);
+    fgcu::AnimatedWindow window(800, 600, "Snake Game");
+    window.setFramerateLimit(25);
 
     Snake snake;
     Wall topWall(0, 0, 800, 5);
@@ -47,8 +47,8 @@ int main() {
         window.clear();
 
         // Update game logic
-        
-        food.update(snake); // Add an update function for the food object and pass the snake object to it
+        snake.update(window, topWall, leftWall, rightWall, bottomWall);
+        food.update(snake);
 
         // Draw game objects
         snake.draw(window);
