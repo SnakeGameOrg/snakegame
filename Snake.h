@@ -32,7 +32,7 @@ public:
 
     Snake();
     void draw(sf::RenderWindow& window);
-    void update(sf::RenderWindow&  window);
+    void update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall& rightWall, Wall& bottomWall);
     void handleInput(sf::Keyboard::Key key);
     bool isEating(fgcu::AnimatedCircle food);
 

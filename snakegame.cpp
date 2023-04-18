@@ -47,7 +47,7 @@ int main() {
         window.clear();
 
         // Update game logic
-        snake.update(window);
+        
         food.update(snake); // Add an update function for the food object and pass the snake object to it
 
         // Draw game objects
