@@ -8,6 +8,9 @@
 #define SNAKEGAME_WALL_H
 
 #include <Eagles/AnimatedRectangle.h>
+#include <SFML/Graphics.hpp>
+#include <Eagles/AnimatedWindow.h>
+#include <Eagles/AnimatedRectangle.h>
 #include "Snake.h"
 
 class Snake;
@@ -15,7 +18,7 @@ class Snake;
 class Wall {
 public:
     Wall(int x, int y, int w, int h);
-    void draw(fgcu::AnimatedWindow& window);
+    void draw(sf::RenderWindow& window);
     bool isCollision(Snake & snake);
 
 private:

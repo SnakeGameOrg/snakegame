@@ -11,8 +11,8 @@ Food::Food() {
     respawn();
 }
 
-void Food::draw(fgcu::AnimatedWindow& window) {
-    window.addShape(&food);
+void Food::draw(sf::RenderWindow& window) {
+    window.draw(food);
 }
 
 void Food::respawn() {
@@ -28,4 +28,10 @@ bool Food::isEaten(Snake& snake) {
         return true;
     }
     return false;
+}
+
+void Food::update(Snake& snake) {
+    if (isEaten(snake)) {
+        respawn();
+    }
 }

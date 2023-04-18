@@ -9,19 +9,25 @@
 
 
 #include <Eagles/AnimatedCircle.h>
+#include <SFML/Graphics.hpp>
+#include <Eagles/AnimatedWindow.h>
+#include <Eagles/AnimatedRectangle.h>
 #include "Snake.h"
 
 class Food {
 public:
     Food();
-    void draw(fgcu::AnimatedWindow& window);
+    void draw(sf::RenderWindow& window);
     void respawn();
     bool isEaten(Snake& snake);
 
+    void update(Snake &snake);
+
 private:
-    static const int FOOD_SIZE = 20;
+    static const int FOOD_SIZE = 10;
 
     fgcu::AnimatedCircle food;
+
 };
 
 #endif //SNAKEGAME_FOOD_H

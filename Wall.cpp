@@ -6,6 +6,12 @@
 
 #include "Wall.h"
 
+#include <SFML/Graphics.hpp>
+#include <Eagles/AnimatedWindow.h>
+#include <Eagles/AnimatedRectangle.h>
+#include <Eagles/AnimatedWindow.h>
+#include <Eagles/AnimatedRectangle.h>
+
 
 Wall::Wall(int x, int y, int w, int h) {
     wall = fgcu::AnimatedRectangle(w, h);
@@ -13,8 +19,8 @@ Wall::Wall(int x, int y, int w, int h) {
     wall.setFillColor(sf::Color::White);
 }
 
-void Wall::draw(fgcu::AnimatedWindow& window) {
-    window.addShape(&wall);
+void Wall::draw(sf::RenderWindow& window) {
+    window.draw(wall);
 }
 
 bool Wall::isCollision(Snake& snake) {

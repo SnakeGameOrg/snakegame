@@ -31,8 +31,8 @@ public:
     static const int SNAKE_SIZE = 30;
 
     Snake();
-    void draw(fgcu::AnimatedWindow& window);
-    void update(fgcu::AnimatedWindow& window);
+    void draw(sf::RenderWindow& window);
+    void update(sf::RenderWindow&  window);
     void handleInput(sf::Keyboard::Key key);
     bool isEating(fgcu::AnimatedCircle food);
 
@@ -49,7 +49,7 @@ private:
     Direction dir;
     int length;
 
-    void checkCollisions(fgcu::AnimatedWindow &window);
+    void checkCollisions(sf::RenderWindow& window);
 
 
 };

@@ -5,6 +5,9 @@
 // --------------------------------------------------------
 
 #include <iostream>
+#include <SFML/Graphics.hpp>
+#include <Eagles/AnimatedWindow.h>
+#include <Eagles/AnimatedRectangle.h>
 #include "Snake.h"
 #include "Food.h"
 #include "Wall.h"
@@ -23,13 +26,13 @@ Snake::Snake() {
     body[0].shape.setFillColor(sf::Color::Blue);
 }
 
-void Snake::draw(fgcu::AnimatedWindow& window) {
+void Snake::draw(sf::RenderWindow& window) {
     for (int i = 0; i < length; i++) {
-        window.addShape(&body[i].shape);
+        window.draw(body[i].shape);
     }
 }
 
-void Snake::update(fgcu::AnimatedWindow& window) {
+void Snake::update(sf::RenderWindow &window) {
     // Move the body
     for (int i = length - 1; i > 0; i--) {
         body[i].shape.setPosition(body[i - 1].shape.getPosition());
@@ -65,14 +68,13 @@ void Snake::update(fgcu::AnimatedWindow& window) {
     if (topWall.isCollision(*this) || leftWall.isCollision(*this) ||
         rightWall.isCollision(*this) || bottomWall.isCollision(*this)) {
         std::cout << "Snake collided with wall" << std::endl;
-        window.close();
+
     }
 
     // Check for collision with self
     for (int i = 1; i < length; i++) {
         if (body[0].shape.getGlobalBounds().intersects(body[i].shape.getGlobalBounds())) {
             std::cout << "Snake collided with self" << std::endl;
-            window.close();
         }
     }
 
