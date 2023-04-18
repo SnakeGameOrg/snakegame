@@ -32,7 +32,7 @@ void Snake::draw(sf::RenderWindow& window) {
     }
 }
 
-void Snake::update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall& rightWall, Wall& bottomWall) {
+void Snake::update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall& rightWall, Wall& bottomWall, Food &food) {
     // Move the body
     for (int i = length - 1; i > 0; i--) {
         body[i].shape.setPosition(body[i - 1].shape.getPosition());
@@ -64,7 +64,7 @@ void Snake::update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall
     if (topWall.isCollision(*this) || leftWall.isCollision(*this) ||
         rightWall.isCollision(*this) || bottomWall.isCollision(*this)) {
         std::cout << "Snake collided with wall" << std::endl;
-
+        //window.close();
     }
 
     // Check for collision with self
@@ -80,7 +80,22 @@ void Snake::update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall
         std::cout << "Snake ate food" << std::endl;
         length++;
         body[length - 1].shape = body[length - 2].shape;
-        window.close();
+        switch (dir) {
+            case North:
+                body[length - 1].shape.move(0, SNAKE_SIZE);
+                break;
+            case South:
+                body[length - 1].shape.move(0, -SNAKE_SIZE);
+                break;
+            case West:
+                body[length - 1].shape.move(SNAKE_SIZE, 0);
+                break;
+            case East:
+                body[length - 1].shape.move(-SNAKE_SIZE, 0);
+                break;
+        }
+
+        food.respawn(); // Make sure to respawn the food after it's eaten
     }
 }
 

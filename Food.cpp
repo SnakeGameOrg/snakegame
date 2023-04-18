@@ -4,6 +4,7 @@
 // Desc : Food implementation
 // --------------------------------------------------------
 #include "Food.h"
+#include "Snake.h"
 
 Food::Food() {
     food = fgcu::AnimatedCircle(FOOD_SIZE);

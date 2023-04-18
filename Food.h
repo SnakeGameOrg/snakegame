@@ -12,7 +12,8 @@
 #include <SFML/Graphics.hpp>
 #include <Eagles/AnimatedWindow.h>
 #include <Eagles/AnimatedRectangle.h>
-#include "Snake.h"
+
+class Snake;
 
 class Food {
 public:
@@ -20,7 +21,6 @@ public:
     void draw(sf::RenderWindow& window);
     void respawn();
     bool isEaten(Snake& snake);
-
     void update(Snake &snake);
 
 private:

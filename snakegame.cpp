@@ -22,7 +22,7 @@ int main() {
     srand(time(NULL));
 
     fgcu::AnimatedWindow window(800, 600, "Snake Game");
-    window.setFramerateLimit(25);
+    window.setFramerateLimit(5);
 
     Snake snake;
     Wall topWall(0, 0, 800, 5);
@@ -47,7 +47,7 @@ int main() {
         window.clear();
 
         // Update game logic
-        snake.update(window, topWall, leftWall, rightWall, bottomWall);
+        snake.update(window, topWall, leftWall, rightWall, bottomWall, food);
         food.update(snake);
 
         // Draw game objects
