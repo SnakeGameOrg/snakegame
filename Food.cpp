@@ -18,8 +18,8 @@ void Food::draw(sf::RenderWindow& window) {
 
 void Food::respawn() {
     // Generate a random position for the food within the window
-    int x = rand() % 26 + 2;
-    int y = rand() % 18 + 2;
+    int x = rand() % 24 + 2;
+    int y = rand() % 16 + 2;
     food.setPosition(x * 30, y * 30);
 }
 

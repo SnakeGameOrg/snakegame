@@ -64,7 +64,7 @@ void Snake::update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall
     if (topWall.isCollision(*this) || leftWall.isCollision(*this) ||
         rightWall.isCollision(*this) || bottomWall.isCollision(*this)) {
         std::cout << "Snake collided with wall" << std::endl;
-        //window.close();
+        window.close();
     }
 
     // Check for collision with self
