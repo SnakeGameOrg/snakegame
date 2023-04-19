@@ -104,6 +104,12 @@ void Snake::update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall
 
 
 void Snake::handleInput(sf::Keyboard::Key key) {
+    if (key != sf::Keyboard::Left && key != sf::Keyboard::A &&
+        key != sf::Keyboard::Right && key != sf::Keyboard::D &&
+        key != sf::Keyboard::Up && key != sf::Keyboard::W &&
+        key != sf::Keyboard::Down && key != sf::Keyboard::S) {
+        return; // Ignores any other key input from user
+    }
     switch (key) {
         case sf::Keyboard::Left:
         case sf::Keyboard::A:
