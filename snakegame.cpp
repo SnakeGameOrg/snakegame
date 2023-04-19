@@ -17,13 +17,16 @@
 #include "Food.h"
 #include "Wall.h"
 
+const int WINDOW_WIDTH = 800;
+const int WINDOW_HEIGHT = 600;
+
 int main() {
     srand(time(NULL));
 
     fgcu::AnimatedWindow window(800, 600, "Snake Game");
     window.setFramerateLimit(5);
 
-    Snake snake;
+    Snake snake(WINDOW_WIDTH, WINDOW_HEIGHT);
     Wall topWall(0, 0, 800, 5);
     Wall leftWall(0, 0, 5, 600);
     Wall rightWall(795, 0, 5, 600);

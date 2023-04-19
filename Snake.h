@@ -21,17 +21,13 @@ class Food;
 class Snake {
 public:
     struct Body {
-        int width;
-        int height;
-        int x;
-        int y;
         fgcu::AnimatedRectangle shape;
     };
 
     static const int MAX_LENGTH = 25;
     static const int SNAKE_SIZE = 30;
 
-    Snake();
+    Snake(int windowWidth, int windowHeight);
     void draw(sf::RenderWindow& window);
     void update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall& rightWall, Wall& bottomWall, Food& food);
     void handleInput(sf::Keyboard::Key key);
@@ -50,8 +46,10 @@ private:
     Direction dir;
     int length;
 
-    void checkCollisions(sf::RenderWindow& window);
+    const int WINDOW_WIDTH;
+    const int WINDOW_HEIGHT;
 
+    void checkCollisions(sf::RenderWindow& window);
 
 };
 

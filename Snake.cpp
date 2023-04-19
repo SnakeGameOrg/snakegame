@@ -12,7 +12,7 @@
 #include "Food.h"
 #include "Wall.h"
 
-Snake::Snake() {
+Snake::Snake(int windowWidth, int windowHeight) : WINDOW_WIDTH(windowWidth), WINDOW_HEIGHT(windowHeight) {
     // Spawn the snake in the middle of the window
     int rows = 600 / SNAKE_SIZE;
     int columns = 800 / SNAKE_SIZE;
