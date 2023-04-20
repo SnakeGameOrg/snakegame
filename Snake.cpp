@@ -63,18 +63,21 @@ void Snake::update(sf::RenderWindow& window, Wall& topWall, Wall& leftWall, Wall
     // Check for collision with walls
     if (topWall.isCollision(*this) || leftWall.isCollision(*this) ||
         rightWall.isCollision(*this) || bottomWall.isCollision(*this)) {
+        std::cout << "Snake collided with wall" << std::endl;
         window.close();
     }
 
     // Check for collision with self
     for (int i = 1; i < length; i++) {
         if (body[0].shape.getGlobalBounds().intersects(body[i].shape.getGlobalBounds())) {
+            std::cout << "Snake collided with self" << std::endl;
             window.close();
         }
     }
 
     // Check for eating food
     if (food.isEaten(*this)) {
+        std::cout << "Snake ate food" << std::endl;
         length++;
         body[length - 1].shape = fgcu::AnimatedRectangle(SNAKE_SIZE, SNAKE_SIZE);
         body[length - 1].shape.setOrigin(SNAKE_SIZE / 2, SNAKE_SIZE / 2);
